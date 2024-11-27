@@ -1576,7 +1576,7 @@ z-index: 1;
 /* Estilo del avatar */
 .avatar {
   width: 40px;
-  height: auto;
+  height: 40px;
 }
 
 .avatar img {
