@@ -1,0 +1,183 @@
+/*
+
+HEADER
+
+*/
+
+header {
+  position: fixed;
+  z-index: 200;
+}
+  
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-decoration: none;
+  z-index: 100;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-text {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  color: var(--color-primary);
+  font-family: var(--sans);
+  font-size: var(--font-size-logo);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* Menú */
+
+.header-wrap {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2);
+}
+
+.header-inner-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+  .header-inner-wrap {
+    gap: var(--spacing-4);
+  }
+}
+
+/* Estilos del botón hamburguesa */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  border-radius: 0;
+}
+
+.hamburger-btn:hover {
+  background-color: transparent;
+}
+
+.hamburger-btn span {
+  display: block;
+  border-radius: var(--borders-3);
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+/* Ocultar el menú en mobile por defecto */
+nav {
+  display: none;
+}
+
+nav.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-primary);
+  padding: var(--spacing-2);
+  z-index: 9;
+}
+
+/* Enlaces del menú en mobile */
+
+nav.active ul li {
+  font-size: var(--font-size-headlines-mobile);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Mostrar el botón hamburguesa solo en mobile */
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* Animación del botón al abrir el menú */
+.hamburger-btn.open span:nth-child(1) {
+  z-index: 50;
+  transform-origin: center;
+  transform: rotate(45deg) translateX(7px) translateY(8px);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+  z-index: 50;
+  transform-origin: center;
+  transform: rotate(-45deg) translateX(7px) translateY(-8px);
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: var(--spacing-4);
+  }
+  
+  nav ul li a {
+    color: var(--color-body);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transform: translateY(5px);
+}
+  
+  nav ul li a.active {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  }
+}
+
+.header-button a {
+  color: var(--color-white-body);
+}
+
+.header-button a:visited {
+  color: var(--color-white-body);
+}
+
+.header-button a:hover {
+  color: var(--color-body);
+}

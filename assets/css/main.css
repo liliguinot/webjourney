@@ -1,0 +1,419 @@
+/* 
+MAIN STYLES
+*/
+
+/* Reset */
+html {
+overflow: hidden;
+}
+
+*,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Selector */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+/* Body */
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  /* Body Text */
+  color: var(--color-body);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+
+  /* Cursor personalizado */
+  cursor: default;
+
+  /* Scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Crea el círculo rojo */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 80%;
+  pointer-events: none;
+  --scale: 1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0) translate(-50%, -50%) scale(var(--scale));
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backface-visibility: hidden;
+}
+
+/* Estilo del cursor grande con mensaje */
+.custom-cursor.large-cursor {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-body);
+  font-size: var(--font-size-details);
+  padding: var(--spacing-1);
+  transform-origin: center;
+}
+
+.custom-cursor.design-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-primary);
+  transform-origin: center;
+  mix-blend-mode: difference;
+}
+
+/* Scroll */
+
+/* Personaliza la parte del fondo del scroll */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Personaliza la parte interior que se mueve (la "thumb") */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: var(--borders-10);
+  border: 3px solid var(--color-white-body);
+}
+
+/* Personaliza el fondo de la pista del scroll */
+::-webkit-scrollbar-track {
+  background: var(--color-white-body);
+  border-radius: 10px;
+}
+
+/* Opcional: Cambia el color del thumb al pasar el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+/* Firefox */
+body {
+  scrollbar-color: var(--color-primary) var(--color-white-body);
+  scrollbar-width: thin;
+}
+
+/* Body Background */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+body::before {
+  background-color: var(--color-background);
+  mix-blend-mode: soft-light;
+}
+
+body::after {
+  background-image: url(../media/webjourney-textura-fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Scroll Container */
+.scroll-container {
+  height: 700vh;
+  position: relative;
+  z-index: -1;
+}
+
+/* Utility Classes */
+.color--black { color: var(--color-body); }
+.color--white { color: var(--color-white-body); }
+.color--red { color: var(--color-accent); }
+.color--green { color: var(--color-primary); }
+
+/* Wraps */
+.main-wrap {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .main-wrap {
+    flex-direction: row;
+  }
+}
+
+.wrap {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    flex-direction: row;
+    padding: var(--spacing-6);
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrap {
+    padding: 0;
+  }
+}
+
+/* Typography */
+h1 {
+  font-family: var(--serif);
+  font-weight: 100;
+  font-size: var(--font-size-headlines-mobile);
+  line-height: 1;
+  mix-blend-mode: multiply;
+  margin-bottom: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--font-size-headlines-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--font-size-headlines);
+  }
+}
+
+h2 {
+  display: inline-block;
+  color: var(--color-accent);
+  font-family: var(--serif);
+  font-size: var(--font-size-big-text);
+  text-transform: uppercase;
+  background-color: var(--color-background);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--borders-5);
+  padding: var(--spacing-1);
+  margin-bottom: var(--spacing-4);
+  margin-left: 0;
+  transform: rotate(-3deg);
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin-bottom: var(--spacing-4);
+  }
+  
+}
+
+h4 {
+  color: var(--color-accent);
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  font-family: var(--serif);
+}
+
+p {
+  margin-bottom: var(--spacing-2);
+}
+
+.details-text {
+  font-size: var(--font-size-details);
+}
+
+/* Buttons and Links */
+button {
+  padding: var(--spacing-1) var(--spacing-3);
+  color: var(--color-white-body);
+  background-color: var(--color-accent);
+  border: 1px solid transparent;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+
+.button-text:nth-child(2){
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	transform: translateY(150%);
+}
+
+.button-home-text:nth-child(2){
+	position: absolute;
+	top: 20%;
+	right: 10%;
+	transform: translateY(150%);
+}
+
+button:hover .button-text {
+	transition: transform 0.5s cubic-bezier(0.6, 0, 0.4, 1)
+}
+
+button:hover .button-text:nth-child(1){
+	transform: translateY(-150%);
+}
+
+button:hover .button-text:nth-child(2) {
+	transform: translateY(-0%);
+}
+
+button:hover {
+  color: var(--color-body);
+  background-color: var(--color-primary);
+}
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-accent);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    transform: translateY(5px);
+  }
+}
+
+.link p {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+a {
+  color: var(--color-body);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-body);
+}
+
+a:active {
+  color: var(--color-accent);
+}
+
+a.active {
+  color: var(--color-accent);
+}
+
+/* Images */
+img {
+  max-width: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Collage Circle */
+.collage-circle {
+  width: 90vmin;
+  height: 90vmin;
+  background-color: var(--color-primary);
+  background-image: url(../media/webjourney-textura-circulo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .collage-circle {
+    width: 70vmin;
+  height: 70vmin;
+    transform: translate(-50%, -50%);
+  }
+}
+.collage-circle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vmin;
+  height: 90vmin;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 1024px) {
+  .collage-circle::after {
+    width: 70vmin;
+  height: 70vmin;
+  }
+}
+
+.big-circle {
+  width: 90vmin;
+  height: 90vmin;
+}
+.big-circle::after {
+  width: 90vmin;
+  height: 90vmin;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.display-none {
+  display: none;
+}

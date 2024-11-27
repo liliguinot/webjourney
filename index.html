@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Web Journey | Cómo hacer crecer una idea para que se convierta en web
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg"
+      href="/assets/media/webjourney-favicon.svg"
+    />
+  </head>
+  <!-- /head -->
+
+  <!-- body -->
+
+  <!-- header -->
+  <!-- Menú de Navegación -->
+  <header>
+    <div class="header-wrap">
+      <a href="index.html"
+        ><div class="logo green-cursor">
+          <p class="logo-text">liliguinot</p>
+        </div></a
+      >
+    </div>
+  </header>
+  <!-- /header -->
+
+  <body>
+    <!-- Intro -->
+    <div class="intro">
+      <figure>
+        <img
+          src="assets/media/webjourney-intro-planta-1.png"
+          alt="Semilla 1"
+          class="intro-plant"
+        />
+        <img
+          src="assets/media/webjourney-intro-planta-2.png"
+          alt="Semilla 2"
+          class="intro-plant"
+        />
+        <img
+          src="assets/media/webjourney-intro-planta-3.png"
+          alt="Semilla 3"
+          class="intro-plant"
+        />
+        <img
+          src="assets/media/webjourney-intro-planta-4.png"
+          alt="Semilla 4"
+          class="intro-plant"
+        />
+        <img
+          src="assets/media/webjourney-intro-planta-5.png"
+          alt="Semilla 5"
+          class="intro-plant"
+        />
+      </figure>
+    </div>
+    <!-- Página de Inicio -->
+    <section class="main-wrap">
+      <div class="wrap home-wrap">
+        <div class="home-content">
+          <h1 class="color--red">Un nuevo proyecto está por brotar</h1>
+          <p>
+            <span class="color--red">WEB JOURNEY |</span> Descubre el proceso
+            que debe seguir una idea para dejar de ser una pequeña semilla y
+            convertirse un frondoso sitio web.
+          </p>
+        </div>
+        <figure class="home-image">
+          <div class="collage-circle home-circle"></div>
+          <img
+            src="assets/media/webjourney-Sansevieria.png"
+            alt="Sansevieria"
+            class="sanse"
+          />
+          <img
+            src="assets/media/webjourney-Laptop.png"
+            alt="Laptop"
+            class="laptop"
+          />
+          <img
+            src="assets/media/webjourney-Helecho.png"
+            alt="Helecho"
+            class="hel"
+          />
+          <img
+            src="assets/media/webjourney-Monstera.png"
+            alt="Monstera"
+            class="mons"
+          />
+          <img
+            src="assets/media/webjourney-Lechuga.png"
+            alt="Lechuga"
+            class="let"
+          />
+          <img
+            src="assets/media/webjourney-Pothos.png"
+            alt="Pothos"
+            class="pothos"
+          />
+        </figure>
+        <div class="home-button green-cursor">
+          <form action="webjourney.html">
+            <button>
+              <div class="button-text button-home-text">
+                ¡Que empiece la siembra!
+              </div>
+              <div class="button-text button-home-text">
+                ¡Que empiece la siembra!
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <small
+        >Un sitio web de Lili Guinot &copy; <span id="year"></span> | Todos los
+        derechos reservados. |
+        <a href="https://liliguinot.com/aviso-legal/" target="_blank"
+          ><span>Legal</span></a
+        >
+        |
+        <a href="https://liliguinot.com/politica-de-privacidad/" target="_blank"
+          ><span>Privacidad</span></a
+        >
+      </small>
+    </footer>
+    <!-- /footer -->
+
+    <!-- scripts -->
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/intro.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script>
+      const year = document.getElementById("year");
+      year.textContent = new Date().getFullYear();
+    </script>
+  </body>
+  <!-- /body -->
+</html>

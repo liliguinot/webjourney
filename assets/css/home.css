@@ -1,0 +1,261 @@
+/*
+
+HOME PAGE
+
+*/
+
+/* Estilos para la INTRO */
+.intro {
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  z-index: 1000;
+}
+
+.intro-plant {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 19%) scale(0.5);
+  transform-origin: bottom;
+  max-height: 70%;
+  width: auto;
+  opacity: 0;
+}
+
+@media (min-width: 1920px) {
+  .intro-plant {
+    transform: translate(-50%, 20%) scale(0.35);
+  }
+}
+
+/* Home wrap and content*/
+
+.home-wrap {
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-content {
+align-self: flex-start;
+padding-top: var(--spacing-8);
+z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .home-content {
+      padding-top: var(--spacing-9);
+      width: 150%;
+      margin-right: -20%;
+      }
+  }
+
+.home-content p span{
+font-family: var(--serif);
+font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .home-content p {
+    max-width: 80%;
+    }
+}
+
+/* Home images */
+
+.home-image {
+  position: relative;
+  width: 100vw;
+  align-self: center;
+  max-width: 80vw;
+}
+
+@media (min-width: 768px) {
+  .home-image {
+      max-width: 60vw;
+      }
+}
+
+@media (min-width: 820px) {
+  .home-image {
+      max-width: 80vw;
+      }
+}
+
+@media (min-width: 1024px) {
+  .home-image {
+      max-width: 100vw;
+      margin-right: -150px;
+      margin-left: 20%;
+      }
+}
+
+.home-image img {
+  margin-top: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  opacity: 0;
+}
+
+@media (min-width: 1024px) {
+  .home-image img {
+    margin-top: 0;
+      }
+}
+
+/* Círculo */
+
+.home-circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+/* Plantas */
+
+/* Sansevieria */
+.sanse{
+  max-width: 20%;
+  transform: scale(1) translate(-50%, -70%) rotate(-25deg);
+  animation: fadeImg1 0.8s ease forwards;
+  animation-delay: calc(4s + 1.5s);
+}
+
+/* Helecho */
+.hel{
+  max-width: 20%;
+  transform: scale(1) translate(-10%, -75%) rotate(20deg);
+  animation: fadeImg3 0.8s ease forwards;
+  animation-delay: calc(4s + 3s);
+}
+
+/* Monstera */
+.mons{
+  max-width: 50%;
+  transform: scale(1) translate(-50%, -35%) rotate(-45deg);
+  animation: fadeImg4 0.8s ease forwards;
+  animation-delay: calc(4s + 1s);
+}
+
+/* Lechuga */
+.let{
+  max-width: 35%;
+  transform: scale(1) translate(-40%, -60%) rotate(50deg);
+  animation: fadeImg5 0.8s ease forwards;
+  animation-delay: calc(4s + 2.5s);
+}
+
+/* Photos */
+.pothos{
+  max-width: 20%;
+  transform: scale(1) translate(10%, 60%) rotate(-25deg);
+  animation: fadeImg6 0.8s ease forwards;
+  animation-delay: calc(4s + 2s);
+}
+
+/* Home animations */
+
+.laptop {
+  transform: scale(1) translate(0, -80%) rotate(-40deg);
+  animation: fadelap 0.8s ease forwards calc(4s + 3.5s), laptop 3s ease-in infinite calc(4.2s + 4.3s);
+}
+
+/* Animación de opacidad */
+@keyframes fadeImg1 {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -70%) rotate(-25deg);
+  }
+}
+
+@keyframes fadeImg3 {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translate(80%, 100%) rotate(20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-10%, -75%) rotate(20deg);
+  }
+}
+
+@keyframes fadeImg4 {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translate(-100%, 100%) rotate(-35deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -35%) rotate(-45deg);
+  }
+}
+
+@keyframes fadeImg5 {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translate(25%, 100%) rotate(30deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-40%, -60%) rotate(50deg);
+  }
+}
+
+@keyframes fadeImg6 {
+  from {
+    opacity: 0;
+    transform: scale(0.2) translateY(100%) rotate(-25deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(10%, 60%) rotate(-25deg);
+  }
+}
+
+@keyframes fadelap {
+    from {
+      opacity: 0;
+      transform: scale(0.2) translate(-60%, 100%) rotate(-40deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translate(0, -80%) rotate(-40deg);
+    }
+  } 
+
+/* Animación de rebote */
+  @keyframes laptop {
+    0% {
+      transform: scale(1) translate(0, -80%) rotate(-40deg);
+    }
+    50% {
+      transform: scale(1) translate(0, -75%) rotate(-40deg);
+    }
+    100% {
+      transform: scale(1) translate(0, -80%) rotate(-40deg);
+    }
+  }
+
+/* Home button */
+.home-button {
+  width: 75vw;
+  align-self: flex-end;
+  text-align: end;
+  padding: var(--spacing-3) 0;
+  z-index: 50;
+  }
+
+
+@media (min-width: 1920px) {
+  .home-button {
+    padding-bottom: var(--spacing-7);
+    }}

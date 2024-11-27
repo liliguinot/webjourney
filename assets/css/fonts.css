@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Bitter';
+  src: url('../fonts/Bitter-Thin.woff2') format('woff2'),
+      url('../fonts/Bitter-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url('../fonts/Bitter-Medium.woff2') format('woff2'),
+      url('../fonts/Bitter-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('../fonts/LibreFranklin-Light.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

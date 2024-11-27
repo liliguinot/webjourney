@@ -1,0 +1,48 @@
+:root {
+    /* Fonts */
+    --sans: "Libre Franklin", Arial, Helvetica, sans-serif;
+    --serif: "Bitter", Garamond, serif;
+    
+    /* Font Size */
+    --font-size-details: 0.7rem;
+    --font-size-body: 1rem;
+    --font-size-big-text: 1.4rem;
+    --font-size-logo: 1.6rem;
+    --font-size-headlines: 6rem;
+    --font-size-small-headlines: 4rem;
+
+    --font-size-headlines-tablet: 6rem;
+
+    --font-size-headlines-mobile: 3.5rem;
+    --font-size-small-headline-mobile: 3rem;
+    --font-size-details-mobile: 0.6rem;
+
+    /* Spacing */
+    --spacing-1: 0.5rem;
+    --spacing-2: 1rem;
+    --spacing-3: 1.5rem;
+    --spacing-4: 2rem;
+    --spacing-5: 3rem;
+    --spacing-6: 4rem;
+    --spacing-7: 5rem;
+    --spacing-8: 6rem;
+    --spacing-9: 8rem;
+
+    /* Light Mode Color Palette */
+    --color-primary: #B4AF79;
+    --color-body: #121B27;
+    --color-white-body: #F8F7F4;
+    --color-background: #E3E1CE;
+    --color-accent: #9E2D2D;
+    --color-grey: #666;
+    --color-overlay: #121b2769;
+
+    /* Border*/
+    --borders-3: 3px;
+    --borders-5: 5px;
+    --borders-10: 10px;
+
+    /* Transition */
+    --transition: all 0.3s ease;
+  }
+  

@@ -1,0 +1,45 @@
+/*
+
+FOOTER
+
+*/
+
+footer {
+  padding: var(--spacing-2);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: var(--spacing-2) var(--spacing-6);
+    position: fixed;
+    bottom: 0;
+      }
+}
+
+footer small {
+  font-size: var(--font-size-details-mobile);
+  color: var(--color-primary);
+  align-self: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer small {
+    font-size: var(--font-size-details);
+  }
+}
+
+footer a span {
+  color: var(--color-primary);
+}
+
+footer a:active span{
+  color: var(--color-primary);
+}
+
+footer a:hover span{
+  color: var(--color-accent);
+}
