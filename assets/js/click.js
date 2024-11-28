@@ -104,6 +104,8 @@ window.addEventListener("load", () => {
               document.querySelector(".testimonios").style.display = "none";
               document.querySelector(".testimonial-wrap").style.display = "none";
               document.querySelector(".watch-wrap").style.display = "none";
+              document.querySelector(".flor-1").style.display = "none";
+              document.querySelector(".flor-2").style.display = "none";
           }
       });
   
